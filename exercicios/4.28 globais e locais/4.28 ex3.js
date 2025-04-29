@@ -13,3 +13,29 @@ adicionarNome()
 adicionarNome()
 removerNome()
 adicionarNome()
+
+
+let ListaNomes = []
+
+function adicionarNome1(nome){
+    ListaNomes.push(nome)
+}
+
+function removerNome1(nome){
+    let pos = ListaNomes.indexOf(nome)
+
+    if (pos != -1){
+        ListaNomes.splice(pos, 1)
+    }
+}
+
+adicionarNome1('Ana')
+adicionarNome1('Mateus')
+adicionarNome1('Camila')
+console.log(ListaNomes)
+adicionarNome1('Garro')
+console.log(ListaNomes)
+removerNome1()
+console.log(ListaNomes)
+removerNome1('Camila')
+console.log();

@@ -8,3 +8,16 @@ conversao(1)
 conversao(5.68)
 conversao(6.46)
 conversao(100)
+
+
+// let cotacaoDolar = 5.65
+// let cotacaoEuro = 6.64
+
+// function converterMoeda(valorReais){
+//     let valorEmDolar = valorReais / cotacaoDolar
+//     let valorEmEuro = valorReais / cotacaoEuro
+
+//     console.log(`R$ ${valorReais.toFixed(2)} equivale a: `);   
+//     console.log(`US$ ${valorEmDolar.toFixed(2)}`);   
+//     console.log(`E EU$ ${valorEmEuro.toFixed(2)}`);   
+// }
