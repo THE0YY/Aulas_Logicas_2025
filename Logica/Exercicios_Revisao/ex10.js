@@ -1,8 +1,9 @@
-const prompt = require('prompt-sync')()
-let nr1 = Number(prompt('Digite um numero: '))
-let nr2 = Number(prompt('Digite um numero: '))
-
-for (nr1; nr1 <= nr2; nr1++){
-    console.log(nr1);
-    
+function contador (nr1,nr2){
+    for (nr1; nr1 <= nr2; nr1++){
+        console.log(nr1);
+    }
 }
+
+contador(5,10)
+contador(7,23)
+contador(9,11)
