@@ -4,11 +4,12 @@ let din = 0
 let gan = 1
 let chanCrt = 5
 let prestigio = 1
+let tran = 1
 let tranPrest = 1
 let tranPontos = 1
 
 let precPrest = 1000
-let precCrit = 250
+let precCrit = 50
 let prec = 10
 let precTranMPres = 5
 let precTranMPont = 2
@@ -132,8 +133,8 @@ while (true){
         ac = prompt('escolha: ')
         if (ac == 'All In'){
             if (Math.floor(Math.random() * 100 + 1) <= 20){
-                   din = din * 10
-                console.log(`Parabens! de: ${din.toLocaleString()/10} foi para ${din.toLocaleString()} (aumento de 10x)`);
+               din = din * 10
+              console.log(`Parabens! de: ${din.toLocaleString()/10} foi para ${din.toLocaleString()} (aumento de 10x)`);
              }
              else{
                 din = din - din

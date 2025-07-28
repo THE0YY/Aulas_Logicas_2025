@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eita bixo</title>
+    <style>
+        body{
+            background-color: darkslategray;
+        }
+        h1{
+            color:antiquewhite;
+            margin-top: 310;
+            text-align: center;
+        }
+        .din{
+            background-color: antiquewhite;
+            width: 75;
+            height: 75;
+        }
+        img{
+            width: 60;
+            height: 60;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .normal{
+            width: 250;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        .butao{
+            width: 154;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="normal">
+        <h1 id="din">$0.00</h1>
+        <div class="butao">
+            <button class="din" onclick="aumeta()"><img src="imagens/gato.png"></button>
+            <button class="din" onclick="upaga()"><img src="imagens/galito.png"></button>
+        </div>
+    </div>
+</body>
+<script>
+    let din = 0
+    let gan = 1
+    let prec = 10
+    function aumeta(){
+        din+=gan
+        document.getElementById("din").textContent = "$"+din.toFixed(2)
+    }
+    function upaga(){
+        if (din<prec){
+            alert("nao tem denero kapa, precisa de " + "$"+prec.toFixed(2))
+        }else{
+            din-=prec
+            gan+=1
+            prec += (prec*0.50)
+            document.getElementById("din").textContent = "$"+din.toFixed(2)
+
+        }
+    }
+</script>
+</html>
