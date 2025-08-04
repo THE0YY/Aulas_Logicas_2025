@@ -5,12 +5,12 @@
     <title>eita bixo</title>
     <style>
         body{
-            background-color: darkslategray;
+            background-color: #353D4A;
         }
         h1{
             color:antiquewhite;
-            margin-top: 310;
             text-align: center;
+            padding-top: 35;
         }
         .din{
             background-color: antiquewhite;
@@ -24,14 +24,33 @@
             margin-right: auto;
         }
         .normal{
-            width: 250;
+            background-color:#686D75;
+            width: 550;
+            height: 250;
+            margin-top: 65;
             margin-left:auto;
             margin-right: auto;
+            border-style: dotted;
+        }
+        .upga{
+            background-color:#686D75;
+            width: 550;
+            height: 250;
+            margin-top: 65;
+            margin-left:auto;
+            margin-right: auto;
+            border-style: dotted;
         }
         .butao{
-            width: 154;
+            width: 75;
             margin-left: auto;
             margin-right: auto;
+        }
+        .butaoU{
+            width: 155;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 75;
         }
     </style>
 </head>
@@ -39,17 +58,30 @@
     <div class="normal">
         <h1 id="din">$0.00</h1>
         <div class="butao">
-            <button class="din" onclick="aumeta()"><img src="imagens/gato.png"></button>
-            <button class="din" onclick="upaga()"><img src="imagens/galito.png"></button>
+            <button class="din" onclick="aumeta()"><img src="imagens/gato.png" alt="gato"></button>
+        </div>
+    </div>
+    <div class="upga">
+        <div class="butaoU">
+            <button class="din" onclick="upaga()"><img src="imagens/galito.png" alt="aumenta coiso"></button>
+            <button class="din" onclick="prest()"><img src="imagens/catarro.jpg" alt="reseta e aumenta coiso"></button>
         </div>
     </div>
 </body>
 <script>
     let din = 0
     let gan = 1
+    let mult = 1
     let prec = 10
+    let pres = 1
+    let precpres = 1000
+    function reset(){
+        din = 0
+        gan = 1
+        prec = 10
+    }
     function aumeta(){
-        din+=gan
+        din+=(gan*pres)*mult
         document.getElementById("din").textContent = "$"+din.toFixed(2)
     }
     function upaga(){
@@ -60,7 +92,16 @@
             gan+=1
             prec += (prec*0.50)
             document.getElementById("din").textContent = "$"+din.toFixed(2)
-
+        }
+    }
+    function prest(){
+        if (din<precpres){
+            alert(`nao tem denero kapa, precisa de ${precpres}`)
+        }else{
+            pres++
+            precpres+=precpres*0.25
+            reset()
+            document.getElementById("din").textContent = "$"+din.toFixed(2)
         }
     }
 </script>
