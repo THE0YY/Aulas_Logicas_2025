@@ -1,15 +1,15 @@
 const prompt = require('prompt-sync')()
 const Funcionarios = [
-      { id: 0, name: "Aurora Almeida", setor: "RH"},
-      { id: 1, name: "Benjamin Souza", setor: "Finanças"},
-      { id: 2, name: "Catarina Dias", setor: "Contabilidade"},
-      { id: 3, name: "Daniel Ribeiro", setor: "Contabilidade"},
-      { id: 4, name: "Elisa Costa", setor: "Vendas"},
-      { id: 5, name: "Felipe Silva", setor: "Vendas"},
-      { id: 6, name: "Gabriela Pereira", setor: "Vendas"}
+      { id: 1, name: "Aurora Almeida", setor: "RH"},
+      { id: 2, name: "Benjamin Souza", setor: "Finanças"},
+      { id: 3, name: "Catarina Dias", setor: "Contabilidade"},
+      { id: 4, name: "Daniel Ribeiro", setor: "Contabilidade"},
+      { id: 5, name: "Elisa Costa", setor: "Vendas"},
+      { id: 6, name: "Felipe Silva", setor: "Vendas"},
+      { id: 7, name: "Gabriela Pereira", setor: "Vendas"}
     ];
 
-    let id = 6
+    let id = 7
     let ac= ''
 while (ac!= 'sair') {
   ac= prompt('Escolher ação(Tudo,Checar,Adicionar,Sair): ').toLowerCase()
@@ -21,7 +21,7 @@ while (ac!= 'sair') {
       if (id <0){
         console.log('Id invalido');
       }else{
-        console.log(Funcionarios[id]);
+        console.log(Funcionarios[id-1]);
       }
     }else if (ac=="sair"){
       break
