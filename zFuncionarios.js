@@ -17,7 +17,7 @@ while (ac!= 'sair') {
       id++
       Funcionarios.push({id: id, nome: prompt('Digite o nome da pessoa'), setor: prompt("Digite o setor da pessoa")})
     }else if (ac== 'checar'){
-      id= Number(prompt('Checar funcionario por id (0+): '))
+      id= Number(prompt('Checar funcionario por id: '))
       if (id <0){
         console.log('Id invalido');
       }else{
