@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import keyboard
+from keyboard import is_pressed
 
 TARGETS = {
     "tile11": (761, 334),
@@ -33,8 +33,6 @@ ROWS = [
 ]
 
 while True:
-    if keyboar.is_pressed('p'):
-        break
     for row in ROWS:              # go row by row
         for tile in row:          # go tile by tile inside this row
             if pyautogui.pixel(*TARGETS[tile]) == (0, 0, 0):

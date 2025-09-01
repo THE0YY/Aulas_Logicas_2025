@@ -1,8 +1,5 @@
-import abc
+import time
 
-a = 'afdsasdgb fwreteryyriuyo'
-vowel = 'aeiou'
+tempo = time.localtime()
 
-for letra in a:
-    if letra in vowel:
-        print(letra, end='')
+print(tempo[3], tempo[4], tempo[5]-6)

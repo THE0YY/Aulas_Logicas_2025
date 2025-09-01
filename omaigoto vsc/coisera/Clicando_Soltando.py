@@ -1,14 +1,12 @@
 import keyboard
-import time
-
-a = 'bom dia'
+from time import sleep
 
 apertado = False  # key state
 
 while True:
     if keyboard.is_pressed('o'):  # when key is down
         if not apertado:
-            print('eiutaoo')   # print on press (if you want)
+            print('eiutaoo')   # print on press
             apertado = True
     else:  # when key is up
         if apertado:  # it was pressed before, now released
@@ -16,4 +14,4 @@ while True:
             apertado = False
     if keyboard.is_pressed('p'):
         break
-    time.sleep(0.01)
+    sleep(0.01)

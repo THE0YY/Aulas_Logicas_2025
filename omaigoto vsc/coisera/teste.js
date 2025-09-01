@@ -1,9 +1,9 @@
-let a
-let o = 0
+let chute
+let qnt = 0
 let ran = Math.floor(Math.random() * 100 + 1)
 
-while(a != ran){
-    a = Math.floor(Math.random() * 100 + 1)
-    o++
+while(chute != ran){
+    chute = Math.floor(Math.random() * 100 + 1)
+    qnt++
 }
-console.log(o);
+console.log(qnt);
