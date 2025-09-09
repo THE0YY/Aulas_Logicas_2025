@@ -11,8 +11,8 @@ import random
 numero = int(input('Numero: '))
 quantidade_chutes = 0
 chute = -1
-mini = int(input('digite o numero minimo'))
-maxi = int(input('digite o numero maximo'))
+mini = int(input('digite o numero minimo: '))
+maxi = int(input('digite o numero maximo: '))
 
 while True:
     chute = (random.randrange(mini,maxi))
